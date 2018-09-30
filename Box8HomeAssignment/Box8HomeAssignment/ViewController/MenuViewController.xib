@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="Box8HomeAssignment" customModuleProvider="target">
+            <connections>
+                <outlet property="menuCollectionView" destination="ahm-gg-Pnj" id="9iJ-iU-7jL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWZ-xJ-16g">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="cQV-G9-7X8"/>
+                    </constraints>
+                    <color key="barTintColor" red="1" green="0.33348897630000002" blue="0.30114797110000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Menu" id="blr-XE-Knr">
+                            <barButtonItem key="leftBarButtonItem" image="back" id="iQK-KH-uBF">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="backButton:" destination="-1" id="nEI-VR-T7O"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" indicatorStyle="white" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-gg-Pnj">
+                    <rect key="frame" x="0.0" y="64" width="375" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="BN2-oD-eYv"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4bc-0r-Z1Y">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="2ed-1H-7ra"/>
+                        <outlet property="delegate" destination="-1" id="c4q-ZS-Gdq"/>
+                    </connections>
+                </collectionView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illustration" translatesAutoresizingMaskIntoConstraints="NO" id="mm6-Wg-dry">
+                    <rect key="frame" x="84.5" y="222.5" width="206" height="136"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="206" id="Qez-uh-G7J"/>
+                        <constraint firstAttribute="height" constant="136" id="hZ0-1L-AL6"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing Yet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ieu-TB-Lv1">
+                    <rect key="frame" x="112.5" y="258" width="150" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="WBA-Hi-9Z3"/>
+                        <constraint firstAttribute="height" constant="29" id="y9O-Wi-899"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mm6-Wg-dry" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1L4-vm-Hsn"/>
+                <constraint firstItem="UWZ-xJ-16g" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2Oa-JG-qhu"/>
+                <constraint firstItem="ahm-gg-Pnj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Jfv-ly-G9C"/>
+                <constraint firstItem="UWZ-xJ-16g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KWW-wb-44A"/>
+                <constraint firstItem="Ieu-TB-Lv1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KeD-8P-NmX"/>
+                <constraint firstItem="ahm-gg-Pnj" firstAttribute="top" secondItem="UWZ-xJ-16g" secondAttribute="bottom" id="Woh-lr-OTE"/>
+                <constraint firstItem="ahm-gg-Pnj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kfA-ww-KFV"/>
+                <constraint firstItem="Ieu-TB-Lv1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-61" id="nYn-WK-yqa"/>
+                <constraint firstItem="UWZ-xJ-16g" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tca-Kz-Rc1"/>
+                <constraint firstItem="mm6-Wg-dry" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-43" id="zuG-jk-70e"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="82.3088455772114"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="12" height="21"/>
+        <image name="illustration" width="206" height="136"/>
+    </resources>
+</document>
